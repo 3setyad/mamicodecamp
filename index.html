@@ -10,54 +10,58 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
         <!-- Latest compiled and minified JavaScript -->
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- font google -->
+        <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,700" rel="stylesheet">
+        <!-- css -->
+        <style>.img{background-image: url("https://cdn.pixabay.com/photo/2016/11/29/03/17/action-1867014_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
+        .img-blend{background-blend-mode:screen;}
+        .text-white{color:white}
+        .text-green{color:turquoise}
+        .bg-outline-white{background-color:transparent;border-color: white}
+        .text-bold{font-weight:bold}
+        .w-25{width:50%}
+        .py-2{padding:2em 0}</style>
     </head>
-    <body>
-        <section id="header">
-            <nav class="navbar bg-danger">
+    <body style="font-family:'Josefin Sans', sans-serif;font-size:1.5em">
+        <!-- header -->
+        <section id="header" class="img img-blend" style="padding-bottom:2em">
+            <nav class="navbar">
                 <div class="container" style="padding:1.5em 0">
                     <div class="navbar-left">
                         <a href="" class="">
-                            <img src="https://mamikos.com/assets/logo_3.png" alt="brand" width="150px">
+                            <!-- <img src="https://mamikos.com/assets/logo_3.png" alt="brand" width="150px"> -->
+                            <img src="http://www.reachdynamics.com/wp-content/uploads/2017/10/Transparent-Blue-and-White-ReachDynamics-Logo-e1508866871172.png" alt="brand" height="75px">
                         </a>
                     </div>
                     <div class="navbar-right">
                         <ul class="nav nav-pills">
-                            <li role="presentation" class="active"><a href="#">Home</a></li>
-                            <li role="presentation"><a href="#">About</a></li>
-                            <li role="presentation"><a href="#">Services</a></li>
-                            <li role="presentation"><a href="#">Experience</a></li>
-                            <li role="presentation">
-                                <div class="dropdown">
-                                    <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                        Dropdown
-                                        <span class="caret"></span>
-                                    </button>
-                                    <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                        <li><a href="#">Action</a></li>
-                                        <li><a href="#">Another action</a></li>
-                                        <li><a href="#">Something else here</a></li>
-                                        <li role="separator" class="divider"></li>
-                                        <li><a href="#">Separated link</a></li>
-                                    </ul>
-                                </div>
-                            </li>
-                            <li role="presentation"><a href="#">Contact</a></li>
+                            <li role="presentation"><a href="#" class="text-green">Home</a></li>
+                            <li role="presentation"><a href="#" class="text-white">About</a></li>
+                            <li role="presentation"><a href="#" class="text-white">Services</a></li>
+                            <li role="presentation"><a href="#" class="text-white">Experience</a></li>
+                            <li role="presentation"><a href="#" class="text-white">Dropdown<span class="caret"></span></a></li>
+                            <li role="presentation"><a href="#" class="text-white">Contact</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-        </section>
-        <section id="activity">
-            <div class="container">
+            <div class="container text-white" style="padding:1.5em 0">
                 <p>My Name Is</p>
-                <h1>John Watson</h1>
-                <p>Web Designer And Developer</p>
-                <p>Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int.</p>
-                <button>Read More</button>
-                <button>Contact Me</button>
+                <h1 class="text-bold text-green">John Watson</h1>
+                <p class="text-bold">Web Designer And Developer</p>
+                <p class="w-25">
+                    Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.
+                    Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus. 
+                </p>
+                <button type="button" class="btn bg-outline-white">Read More</button>
+                <button type="button" class="btn bg-outline-white">Contact Me</button>
             </div>
         </section>
-        <section id="aboutMe"></section>
+        <!-- about me -->
+        <section id="aboutMe" class="container py-2">
+            <h1 class="text-center">About Me</h1>
+            <hr width="100px" style="">
+        </section>
         <section id="services"></section>
         <section id="experience"></section>
         <section id="blog"></section>
