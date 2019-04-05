@@ -13,16 +13,18 @@
         <!-- font google -->
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
         <!-- css -->
-        <style>.img{background-image: url("https://cdn.pixabay.com/photo/2016/11/29/03/17/action-1867014_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
+        <style>.img{background-image: url("https://cdn.pixabay.com/photo/2016/09/02/11/10/shoes-1638873_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
+        .img2{background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
         .img-blend{background-blend-mode:screen}
-        .text-white{color:white}.text-green{color:turquoise}
+        .text-white{color:white}.text-green{color:turquoise}.text-blue{color:#0B8EA2}
         .bg-outline-white{background-color:transparent;border-color: white}
         .text-bold{font-weight:bold}
-        .w-25{width:50%}
+        .w-50{width:50%}
         .py-2{padding-top:2em;padding-bottom:2em}.pb-1{padding-bottom:1em}.px-2{padding-right:2em;padding-left:2em}
         .float-right{float:right}.float-left{float:left}
         .d-inline{display:inline}
-        .d-inline-block{display:inline-block}</style>
+        .d-inline-block{display:inline-block}
+        .bg-green{background-color:#31C39E}.bg-blue{background-color:#0B8EA2}.bg-white{background-color:white}.bg-black{background-color:black}</style>
     </head>
     <body style="font-family:'Josefin Sans', sans-serif;font-size:1.5em">
         <!-- header -->
@@ -51,7 +53,7 @@
                 <p>My Name Is</p>
                 <h1 class="text-bold text-green">John Watson</h1>
                 <p class="text-bold">Web Designer And Developer</p>
-                <p class="w-25">
+                <p class="w-50">
                     Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.
                     Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus. 
                 </p>
@@ -103,7 +105,8 @@
                 </div>
             </div>
         </section>
-        <section id="services" style="background-color:#31C39E">
+        <!-- services -->
+        <section id="services" class="bg-green">
             <div class="container py-2">
                 <h1 class="text-center text-white">Services
                     <hr style="border-top:0.25rem solid;width:5%">
@@ -136,6 +139,7 @@
                 </div>
             </div>
         </section>
+        <!-- experience -->
         <section id="experience" class="container py-2">
             <h1 class="text-center">Experience
                 <hr style="border-top:0.25rem solid;width:5%">
@@ -185,9 +189,113 @@
                 </div>
             </div>
         </section>
-        <section id="blog"></section>
-        <section id="projects"></section>
-        <section id="workHire"></section>
+        <!-- blog -->
+        <section id="blog" class="img2 img-blend py-2">
+            <div class="container text-white">
+                <h1 class="text-center">Blog
+                    <hr style="border-top:0.25rem solid;width:5%">
+                </h1>
+                <h3>I Write Beautiful Things</h3>
+                <p class="w-50">Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
+                <div class="row">
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption" style="padding-left:2em">
+                                <div style="display:flex;align-items:center">
+                                    <h4 class="text-bold" style="flex:0.70">Web Designer</h4>
+                                    <span class="label bg-green" style="flex:0.20">25th June</span>
+                                </div>
+                                <p class="d-inline-block">Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
+                                <p><a href="#" class="btn-link" role="button">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption" style="padding-left:2em">
+                                <div style="display:flex;align-items:center">
+                                    <h4 class="text-bold" style="flex:0.70">Mobile Apps</h4>
+                                    <span class="label bg-green" style="flex:0.20">25th June</span>
+                                </div>
+                                <p class="d-inline-block">Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
+                                <p><a href="#" class="btn-link" role="button">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6 col-md-4">
+                        <div class="thumbnail">
+                            <div class="caption" style="padding-left:2em">
+                                <div style="display:flex;align-items:center">
+                                    <h4 class="text-bold" style="flex:0.70">Web Development</h4>
+                                    <span class="label bg-green" style="flex:0.20">25th June</span>
+                                </div>
+                                <p class="d-inline-block">Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
+                                <p><a href="#" class="btn-link" role="button">Read More</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <div class="container py-2">
+                <h1 class="text-center">Projects
+                    <hr style="border-top:0.25rem solid;width:5%">
+                </h1>
+                <div class="row">
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2014/05/02/21/47/workstation-336369_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2014/05/02/21/47/workstation-336369_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                    <div class="col-md-3 pb-1">
+                        <figure>
+                            <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="" height="200px" width="100%">
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            <div class="bg-blue py-2 text-center">
+                <div class="container w-50 text-white">
+                    <h3>Ulvinar Neque Pharetra Ac Int. Placerat</h3>
+                    <p>
+                        Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.
+                        Nullam eu elit neque lectus.</p>
+                    <button type="button" class="btn bg-white px-2 text-blue">My Work</button>
+                    <button type="button" class="btn bg-black px-2 text-white">Hire Me</button>
+                </div>
+            </div>
+        </section>
         <section id="contact"></section>
         <section id="footer"></section>
     </body>
