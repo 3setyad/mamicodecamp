@@ -3,19 +3,35 @@
     <head>
         <title>MAMICODECAMP</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=1024px, initial-scale=1, maximum-scale=1, user-scalable=no">
+        <!-- <meta name="viewport" content="width=1024px, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <!-- Optional theme -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css">
         <!-- Latest compiled and minified JavaScript -->
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script>
+            // $('#header .nav-pills li').on('click', function() {
+                // e.stopPropagation();
+                function active(id) {
+                    console.log(id);
+                    $('.aaa').removeClass('text-green');
+                    $('.aaa').addClass('text-white');
+                    $('#'+id).removeClass('text-white');
+                    $('#'+id).addClass('text-green');
+                }
+                // $('.nav li').removeClass('active');
+                // $(this).addClass('active');
+            // });
+        </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- font google -->
         <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600" rel="stylesheet">
         <!-- font awesome -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- css -->
-        <style>.img{background-image: url("https://cdn.pixabay.com/photo/2016/09/02/11/10/shoes-1638873_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
+        <style>
+        .img{background-image: url("https://cdn.pixabay.com/photo/2016/09/02/11/10/shoes-1638873_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
         .img2{background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
         .img-blend{background-blend-mode:screen}
         .text-white{color:white}.text-green{color:#31C39E}.text-blue{color:#0B8EA2}.text-black{color:black}
@@ -27,27 +43,36 @@
         .float-right{float:right}.float-left{float:left}
         .d-inline{display:inline}
         .d-inline-block{display:inline-block}
-        .bg-green{background-color:#31C39E}.bg-blue{background-color:#0B8EA2}.bg-white{background-color:white}.bg-black{background-color:black}.bg-gray{background-color:#0f0f0f}</style>
+        .bg-green{background-color:#31C39E}.bg-blue{background-color:#0B8EA2}.bg-white{background-color:white}.bg-black{background-color:black}.bg-gray{background-color:#0f0f0f}
+        </style>
     </head>
     <body style="font-family:'Josefin Sans', sans-serif;font-size:1.5em">
         <!-- header -->
-        <section id="header" class="img img-blend" style="padding-bottom:2em">
-            <nav class="navbar">
-                <div class="container" style="padding:1.5em 0">
+        <section id="header" class="img img-blend" style="padding-bottom:2em;padding-top:5em">
+            <nav class="navbar navbar-fixed-top bg-black" style="min-height:auto;padding:0.25em 0">
+                <div class="container">
                     <div class="navbar-left">
                         <a href="" class="">
-                            <!-- <img src="https://mamikos.com/assets/logo_3.png" alt="brand" width="150px"> -->
-                            <img src="http://www.reachdynamics.com/wp-content/uploads/2017/10/Transparent-Blue-and-White-ReachDynamics-Logo-e1508866871172.png" alt="brand" height="50px">
+                            <figure>
+                                <img src="http://www.reachdynamics.com/wp-content/uploads/2017/10/Transparent-Blue-and-White-ReachDynamics-Logo-e1508866871172.png" alt="brand" height="40px">
+                            </figure>
                         </a>
                     </div>
                     <div class="navbar-right">
                         <ul class="nav nav-pills">
-                            <li role="presentation"><a href="#" class="text-green">Home</a></li>
-                            <li role="presentation"><a href="#" class="text-white">About</a></li>
-                            <li role="presentation"><a href="#" class="text-white">Services</a></li>
-                            <li role="presentation"><a href="#" class="text-white">Experience</a></li>
-                            <li role="presentation"><a href="#" class="text-white">Dropdown<span class="caret"></span></a></li>
-                            <li role="presentation"><a href="#" class="text-white">Contact</a></li>
+                            <li role="presentation"><a href="#" id="home" class="text-green aaa" onclick="active('home')">Home</a></li>
+                            <li role="presentation"><a href="#aboutme" id="about" class="text-white aaa" onclick="active('about')">About</a></li>
+                            <li role="presentation"><a href="#_services" id="services" class="text-white aaa" onclick="active('services')">Services</a></li>
+                            <li role="presentation"><a href="#_experience" id="experience" class="text-white aaa" onclick="active('experience')">Experience</a></li>
+                            <li role="presentation" class="dropdown">
+                                <a href="#" id="owner" class="text-white aaa" onclick="active('owner')" class="text-white dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+                                    Owner<span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="#blog">Blog</a></li>
+                                    <li><a href="#projects">Projects</a></li>
+                                </ul>
+                            </li>
+                            <li role="presentation"><a href="#_contact" id="contact" class="text-white aaa" onclick="active('contact')">Contact</a></li>
                         </ul>
                     </div>
                 </div>
@@ -65,7 +90,7 @@
             </div>
         </section>
         <!-- about me -->   
-        <section id="aboutMe" class="container py-2">
+        <section id="aboutme" class="container py-2">
             <h1 class="text-center">About Me
                 <hr style="border-top:0.25rem solid;width:5%">
             </h1>
@@ -111,7 +136,7 @@
             </div>
         </section>
         <!-- services -->
-        <section id="services" class="bg-green">
+        <section id="_services" class="bg-green">
             <div class="container py-2">
                 <h1 class="text-center text-white">Services
                     <hr style="border-top:0.25rem solid;width:5%">
@@ -145,7 +170,7 @@
             </div>
         </section>
         <!-- experience -->
-        <section id="experience" class="container py-2">
+        <section id="_experience" class="container py-2">
             <h1 class="text-center">Experience
                 <hr style="border-top:0.25rem solid;width:5%">
             </h1>
@@ -303,7 +328,7 @@
             </div>
         </section>
         <!-- contact -->
-        <section id="contact">
+        <section id="_contact">
             <div class="container py-2">
                 <h1 class="text-center">Contact
                     <hr style="border-top:0.25rem solid;width:5%">
