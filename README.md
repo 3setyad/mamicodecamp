@@ -1,2 +1,2 @@
 # mamicodecamp
-Ini repo untuk tugas final task mamicam batch 1
+Ini repo untuk tugas final task mamicamp batch 1
