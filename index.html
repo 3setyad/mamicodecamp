@@ -23,6 +23,18 @@
                 // $('.nav li').removeClass('active');
                 // $(this).addClass('active');
             // });
+            $(document).ready(function(){
+                $(window).scroll(function(){
+                    var scroll = $(window).scrollTop();
+                    if (scroll > 300) {
+                        $(".navv").css("background" , "black");
+                    }
+
+                    else{
+                        $(".navv").css("background" , "rgba(2, 2, 2, 0.2)");  	
+                    }
+                })
+            })
         </script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- font google -->
@@ -31,34 +43,58 @@
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <!-- css -->
         <style>
-        .img{background-image: url("https://cdn.pixabay.com/photo/2016/09/02/11/10/shoes-1638873_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
-        .img2{background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
-        .img-blend{background-blend-mode:screen}
-        .text-white{color:white}.text-green{color:#31C39E}.text-blue{color:#0B8EA2}.text-black{color:black}
-        .bg-outline-white{background-color:transparent;border-color: white}
-        .text-bold{font-weight:bold}
-        .w-50{width:50%}
-        .py-2{padding-top:2em;padding-bottom:2em}.pb-1{padding-bottom:1em}.px-2{padding-right:2em;padding-left:2em}
-        .mx-1{margin-left:1em;margin-right:1em}
-        .float-right{float:right}.float-left{float:left}
-        .d-inline{display:inline}
-        .d-inline-block{display:inline-block}
-        .bg-green{background-color:#31C39E}.bg-blue{background-color:#0B8EA2}.bg-white{background-color:white}.bg-black{background-color:black}.bg-gray{background-color:#0f0f0f}
+        @media (min-width: 320px){
+            .img{background-image: url("https://cdn.pixabay.com/photo/2016/09/02/11/10/shoes-1638873_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
+            .img2{background-image: url("https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg");background-color:black;background-repeat:no-repeat;background-size:cover}
+            .img-blend{background-blend-mode:screen}
+            .text-white{color:white}.text-green{color:#31C39E}.text-blue{color:#0B8EA2}.text-black{color:black}
+            .bg-outline-white{background-color:transparent;border-color: white}
+            .text-bold{font-weight:bold}
+            .w-50{width:50%}
+            .py-2{padding-top:2em;padding-bottom:2em}.py-1{padding-top:1em;padding-bottom:1em}.pb-1{padding-bottom:1em}.px-2{padding-right:2em;padding-left:2em}
+            .mx-1{margin-left:1em;margin-right:1em}
+            .float-right{float:right}.float-left{float:left}
+            .d-inline{display:inline}
+            .d-inline-block{display:inline-block}
+            .bg-green{background-color:#31C39E}.bg-blue{background-color:#0B8EA2}.bg-white{background-color:white}.bg-black{background-color:black}.bg-gray{background-color:#0f0f0f}
+            .op-5{opacity:0.5}
+        }
+        @media (max-width: 990px) {
+            .navbar-header {float:none}
+            .navbar-toggle {display:block}
+            .navbar-collapse {border-top:1px solid transparent;box-shadow:inset 0 1px 0 rgba(255,255,255,0.1)}
+            .navbar-collapse.collapse:not(.in) {display:none!important}
+            .navbar-nav {float:none!important;margin:7.5px -15px}
+            .navbar-nav>li {float:none}
+            .navbar-nav>li>a {padding-top:10px;padding-bottom:10px}
+            .w-50 {width:75%}
+        }
         </style>
     </head>
     <body style="font-family:'Josefin Sans', sans-serif;font-size:1.5em">
         <!-- header -->
         <section id="header" class="img img-blend" style="padding-bottom:2em;padding-top:5em">
-            <nav class="navbar navbar-fixed-top bg-black" style="min-height:auto;padding:0.25em 0">
+            <nav class="navv navbar navbar-fixed-top" style="min-height:auto;padding:0.25em 0;background:rgba(2, 2, 2, 0.2)">
                 <div class="container">
-                    <div class="navbar-left">
-                        <a href="" class="">
-                            <figure>
-                                <img src="http://www.reachdynamics.com/wp-content/uploads/2017/10/Transparent-Blue-and-White-ReachDynamics-Logo-e1508866871172.png" alt="brand" height="40px">
-                            </figure>
-                        </a>
+                    <!-- mobile and tablet -->
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed btn bg-green text-white" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                            <strong>Menu</strong>
+                            <!-- <span class="sr-only">Toggle navigation</span> -->
+                            <!-- <span class="icon-bar"></span> -->
+                            <!-- <span class="icon-bar"></span> -->
+                            <!-- <span class="icon-bar"></span> -->
+                        </button>
+                        <div class="navbar-left">
+                            <a href="" class="">
+                                <figure>
+                                    <img src="http://www.reachdynamics.com/wp-content/uploads/2017/10/Transparent-Blue-and-White-ReachDynamics-Logo-e1508866871172.png" alt="brand" height="50px">
+                                </figure>
+                            </a>
+                        </div>
                     </div>
-                    <div class="navbar-right">
+                    <!-- laptop -->
+                    <div class="navbar-right collapse navbar-collapse" id="bs-example-navbar-collapse-1" style="padding-top:0.5em;padding-bottom:0.5em">
                         <ul class="nav nav-pills">
                             <li role="presentation"><a href="#" id="home" class="text-green aaa" onclick="active('home')">Home</a></li>
                             <li role="presentation"><a href="#aboutme" id="about" class="text-white aaa" onclick="active('about')">About</a></li>
@@ -77,7 +113,7 @@
                     </div>
                 </div>
             </nav>
-            <div class="container text-white" style="padding:1.5em 0">
+            <div class="container text-white py-2">
                 <p>My Name Is</p>
                 <h1 class="text-bold text-green">John Watson</h1>
                 <p class="text-bold">Web Designer And Developer</p>
@@ -95,7 +131,7 @@
                 <hr style="border-top:0.25rem solid;width:5%">
             </h1>
             <div class="row">
-                <div class="col-md-4 col-sm-4">
+                <div class="col-md-4 col-sm-12">
                     <h3 class="pb-1">Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int.</h3>
                     <p class="pb-1">
                         Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.
@@ -105,31 +141,31 @@
                         <span class="glyphicon glyphicon-inbox" style="padding-left:0.5em"></span>
                     </button>
                 </div>
-                <div class="col-md-4 col-sm-4">
+                <div class="col-md-4 col-sm-12 py-1">
                     <figure>
-                        <img src="https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336378_960_720.jpg" alt="" height="300px" width="100%">
+                        <img src="https://cdn.pixabay.com/photo/2014/05/02/21/50/home-office-336378_960_720.jpg" alt="" height="auto" width="100%">
                     </figure>
                 </div>
-                <div class="col-md-4 col-sm-4">
+                <div class="col-md-4 col-sm-12">
                     <div class="d-inline">
                         <h4 class="text-bold float-left">Designing & Developing</h4>
                         <h4 class="text-bold float-right">95%</h4>
                     </div>
-                    <div class="pb-1 d-inline-block">
+                    <div class="pb-1 d-inline-block" style="width:100%">
                         <p>Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
                     </div>
                     <div class="d-inline">
                         <h4 class="text-bold float-left">Java & Scripting</h4>
                         <h4 class="text-bold float-right">85%</h4>
                     </div>
-                    <div class="pb-1 d-inline-block">
+                    <div class="pb-1 d-inline-block" style="width:100%">
                         <p>Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
                     </div>
                     <div class="d-inline">
                         <h4 class="text-bold float-left">Photoshop & Editing</h4>
                         <h4 class="text-bold float-right">90%</h4>
                     </div>
-                    <div class="pb-1 d-inline-block">
+                    <div class="pb-1 d-inline-block" style="width:100%">
                         <p>Lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc.</p>
                     </div>
                 </div>
@@ -142,27 +178,27 @@
                     <hr style="border-top:0.25rem solid;width:5%">
                 </h1>
                 <div class="row">
-                    <div class="col-md-4 pb-1">
+                    <div class="col-md-4 col-sm-6 pb-1">
                         <h4 class="text-bold text-white"><span class="glyphicon glyphicon-cog" style="padding-right:0.5em"></span>UI/UX Design</h4>
                         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                     </div>
-                    <div class="col-md-4 pb-1">
+                    <div class="col-md-4 col-sm-6 pb-1">
                         <h4 class="text-bold text-white"><span class="glyphicon glyphicon-phone" style="padding-right:0.5em"></span>Mobile Apps</h4>
                         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                     </div>
-                    <div class="col-md-4 pb-1">
+                    <div class="col-md-4 col-sm-6 pb-1">
                         <h4 class="text-bold text-white"><span class="glyphicon glyphicon-blackboard" style="padding-right:0.5em"></span>Web Developer</h4>
                         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                     </div>
-                    <div class="col-md-4 pb-1">
+                    <div class="col-md-4 col-sm-6 pb-1">
                         <h4 class="text-bold text-white"><span class="glyphicon glyphicon-camera" style="padding-right:0.5em"></span>Photoshop</h4>
                         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                     </div>
-                    <div class="col-md-4 pb-1">
+                    <div class="col-md-4 col-sm-6 pb-1">
                         <h4 class="text-bold text-white"><span class="glyphicon glyphicon-headphones" style="padding-right:0.5em"></span>Software</h4>
                         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                     </div>
-                    <div class="col-md-4 pb-1">
+                    <div class="col-md-4 col-sm-6 pb-1">
                         <h4 class="text-bold text-white"><span class="glyphicon glyphicon-cloud" style="padding-right:0.5em"></span>Graphic Design</h4>
                         <p class="text-white">Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                     </div>
@@ -274,49 +310,49 @@
                     <hr style="border-top:0.25rem solid;width:5%">
                 </h1>
                 <div class="row">
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2014/05/02/21/47/workstation-336369_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2014/05/02/21/47/workstation-336369_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2016/03/26/13/09/notebook-1280538_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
-                    <div class="col-md-3 pb-1">
+                    <div class="col-md-3 col-sm-4 col-xs-6 pb-1">
                         <figure>
                             <img src="https://cdn.pixabay.com/photo/2017/11/27/21/31/computer-2982270_960_720.jpg" alt="" height="200px" width="100%">
                         </figure>
                     </div>
                 </div>
             </div>
-            <div class="bg-blue py-2 text-center">
+            <div class="bg-blue text-center" style="padding-bottom:2em;padding-top:1em">
                 <div class="container w-50 text-white">
                     <h3>Ulvinar Neque Pharetra Ac Int. Placerat</h3>
                     <p>
